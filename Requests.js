@@ -5,7 +5,7 @@ const URL = `https://api.exchangeratesapi.io/latest`;
 const callExternalApiUsingRequest = (callback) => {
 	request(URL, { json: true }, (err, res, body) => {
 
-		if (err) { 
+		if (err) {
 			return callback(err);
 		}
 
@@ -17,4 +17,4 @@ const callExternalApiUsingRequest = (callback) => {
 	});
 }
 
-module.exports.callApi = callExternalApiUsingRequest;
+module.exports = callExternalApiUsingRequest;
