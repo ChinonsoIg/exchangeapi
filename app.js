@@ -9,7 +9,8 @@ const port = process.env.PORT || 4001;
 app.use('/api', exchangeRouter);
 
 app.get('/', (req, res) => {
-  res.send(`Welcome to my Node API. Add '/api/rates' to the link to fetch all rates`)
+  res.send(`Welcome to my Node API. Add '/api/rates' to the link to fetch all rates.  
+  Eg: https://exchangerateapi-chinonsoig.herokuapp.com/api/rates`)
 });
 
 
