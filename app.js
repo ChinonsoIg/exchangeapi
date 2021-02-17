@@ -1,10 +1,8 @@
 const express = require("express");
-const serverless = require('serverless-http');
 
 const exchangeRouter = require('./routes/exchangeRoutes');
 
 const app = express();
-// const exchangeRouter = express.Router();
 const port = process.env.PORT || 4001;
 
 // exchangeRouter.route(`/rates`)
@@ -57,8 +55,6 @@ app.use('/api', exchangeRouter);
 app.get('/', (req, res) => {
   res.send(`Welcome to my nodemon API. Visit this link '/api/rates'`)
 });
-
-app.use('/.netlify/functions/app', exchangeRouter);  // path must route to lambda
 
 
 app.listen(port, () => {
