@@ -17,7 +17,7 @@ You'll get the exchange rate of all the currencies, with EUR as the base.
 
 To add query parameters:
 ```
-/api/rates?**base**=CAD&**currency**=GBP,HKD,ISK,PHP
+/api/rates?base=CAD&currency=GBP,HKD,ISK,PHP
 ```
 This will produce get data like so:
 ```
